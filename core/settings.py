@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--8oxr2&1rhh+&ilyg&+88qs_)$w14ma48_m!3wb^72-n!g0cjt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['serverstore.pythonanywhere.com']
+ALLOWED_HOSTS = ['serverstore.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -107,7 +107,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db_store',
+        'NAME': BASE_DIR / 'db_store.sqlite3',
     }
 }
 
@@ -150,9 +150,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
-    BASE_DIR / 'staticfiles',
+    BASE_DIR / 'static',
 ]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
