@@ -12,3 +12,6 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [permissions.AllowAny,]
     pagination_class = CustomPagination
 
+    def get_queryset(self):
+        # list random products each refresh request time
+        return Product.objects.order_by('?')[0:50]
