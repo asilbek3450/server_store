@@ -14,4 +14,8 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         # list random products each refresh request time
+<<<<<<< HEAD
         return Product.objects.order_by('?')[0:200]
+=======
+        return Product.objects.order_by('?')[:200]
+>>>>>>> origin/main
